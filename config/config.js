@@ -87,6 +87,22 @@ var config = {
 				showPublishDate: true
 			}
 		},
+
+		//{
+		//module: 'MMM-iFrame',
+		//position: 'bottom_left',	// This can be any of the regions.
+		//config: {
+		//	// See 'Configuration options' for more information.
+		//		url: ["https://www.youtube.com/embed/yw_nqzVfxFQ?autoplay=1"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+		//		updateInterval:  3* 60 * 1000, // rotate URLs every 30 seconds
+		//		width: "100%", // Optional. Default: 100%
+		//		height: "100px" //Optional. Default: 100px
+		//	}
+		//},
+	
+		
+
+
 	]
 
 };

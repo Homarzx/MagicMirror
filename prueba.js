@@ -4,7 +4,7 @@ let contador = 0;
 
 board.on("ready", function () {
 	var proximity = new five.Proximity({
-		controller: "HCS04",
+		controller: "HCSR04",
 		pin: 7
 	})
 
