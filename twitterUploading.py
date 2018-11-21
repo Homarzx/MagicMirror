@@ -7,7 +7,7 @@ ACCESS_TOKEN_SECRET = 'XPFiLIpywtgKKzou€€€€€€€€jmxxce57gcYHELxqx
 
 api = TwitterAPI(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
 
-file = open('Image.jpg', 'rb')
+file = open('/home/pi/Pictures/1542812802.07606.jpg', 'rb')
 data = file.read()
 upload = api.request('statuses/update_with_media', {'status':'Your tweet'}, {'media[]':data})
 print(upload.status_code)

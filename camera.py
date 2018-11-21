@@ -10,9 +10,10 @@ def recordingvideo():
     camera.stop_recording()
 
 with picamera.PiCamera() as camera:
-	camera.resolution = 'HD'
+	camera.resolution = '720p'
 	camera.start_preview()
-	time.sleep(10)
-	camera.capture('/home/pi/Pictures/image.jpg')
+	time.sleep(2)
+	camera.capture('/home/pi/Pictures/' + str(time.time()) + '.jpg')
+	time.sleep(1)
 	camera.stop_preview()
 

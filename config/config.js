@@ -73,6 +73,16 @@ var config = {
 		// 		appid: "YOUR_OPENWEATHER_API_KEY"
 		// 	}
 		// },
+{
+	module: 'MMM-Selfie',
+	config:
+	{
+	    useUSBCam: false,
+	    maxResX: 2592,
+	    maxResY: 1944,
+	    cameraRotation: 0
+	}
+},
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
