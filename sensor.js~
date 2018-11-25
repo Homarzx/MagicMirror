@@ -13,16 +13,15 @@ board.on("ready", function () {
 	})
 	let self = this
 	proximity.on("change",function () {
-		console.log(this.cm)
 		if (this.cm < 30) {
 			contador++
 		} else {
 			contador=0
 			
 		}
-		if (contador === 2 && !tomando) {
+		if (contador === 3 && !tomando) {
 			led.pulse()
-			self.wait(5000, function () {
+			self.wait(3000, function () {
 				led.stop().off()
 			})
 			tomando = true
@@ -35,7 +34,6 @@ board.on("ready", function () {
 
 function takePhoto (err) {
 	if (err) {
-		console.log(err)
 		console.log("error al tomar fotos continuas????. No se todavia como solucionarlo")
 	}
 	cantidad_fotos++

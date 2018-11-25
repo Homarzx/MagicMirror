@@ -1,13 +1,10 @@
-import TwitterAPI
-#usar keys borrando €€€
-CONSUMER_KEY = '4AfoCX5060A€€€€€€€u6qRj1R4hi7vNu'
-CONSUMER_SECRET = 'CoP7NMtk4Djy14yJcVs8NDmxtZC€€€€€€€€5wJkTQCM42toj9zd1NcvnM6'
-ACCESS_TOKEN_KEY = '1061795272664272896-Qv4WQGb8€€€€€€€€oDM8SVEuAkXmhfZe30kBzY'
-ACCESS_TOKEN_SECRET = 'XPFiLIpywtgKKzou€€€€€€€€jmxxce57gcYHELxqxMkg2xtOiHkaf'
+import tweepy
 
-api = TwitterAPI(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
+auth = tweepy.OAuthHandler("6fugPhPrG5Ybb2faRJxoKcLvo", "5pUH4qTzUB9gYay1iyG5Hth14mXMmYUXbbWFF1sOQGlBvvV2Fv")
+auth.set_access_token("1437051505-7gj6wf6tF7y0BsWVesSESz0CQHpGBUF8sFkvQ9q", "Ap9feKToDNxzcRLM1t3as9ZoqMJecQSsODJ3C5r6finzD")
 
-file = open('/home/pi/Pictures/1542812802.07606.jpg', 'rb')
-data = file.read()
-upload = api.request('statuses/update_with_media', {'status':'Your tweet'}, {'media[]':data})
-print(upload.status_code)
+api = tweepy.API(auth)
+
+api.update_with_media(status='preuba', filename="/home/pi/Pictures/1542012737.4251988.jpg")
+
+
